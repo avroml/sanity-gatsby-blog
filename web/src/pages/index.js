@@ -37,7 +37,6 @@ export const query = graphql`
   query IndexPageQuery {
     site: sanitySiteSettings(_id: { regex: "/(drafts.|)siteSettings/" }) {
       title
-      subtitle
       description
       keywords
     }
@@ -97,8 +96,12 @@ const IndexPage = (props) => {
         keywords={site.keywords}
       />
       <Container>
+<<<<<<< HEAD
         <h1>{site.title}</h1>
         <p>{site.subtitle}</p> /* custom */ 
+=======
+        <h1 hidden>Welcome to {site.title}</h1>
+>>>>>>> parent of cb03568 (add 'subtitle' schema and field on index)
         {postNodes && (
           <BlogPostPreviewList
             title="Latest blog posts"
