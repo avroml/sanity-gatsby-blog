@@ -98,7 +98,7 @@ const IndexPage = (props) => {
       />
       <Container>
         <h1>{site.title}</h1>
-        <p>{site.subtitle}</p>
+        <p>{site.subtitle}</p> /* custom */ 
         {postNodes && (
           <BlogPostPreviewList
             title="Latest blog posts"
